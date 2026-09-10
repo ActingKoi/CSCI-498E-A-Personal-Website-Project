@@ -1,5 +1,7 @@
 # Project 1 - Build Your Personal Website
 
+**Live site: [https://actingkoi.github.io/CSCI-498E-A-Personal-Website-Project/](https://actingkoi.github.io/CSCI-498E-A-Personal-Website-Project/)**
+
 **CSCI 498E / 598E - Coding with AI Agents**
 
 | | |
