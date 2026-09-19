@@ -23,7 +23,7 @@ src/
   styles/theme.css   every color and font (re-skin the site here)
   styles/*.css       layout and component styles
 public/              files copied as-is: resume.pdf and images/
-scripts/             helper scripts run on your computer (Spotify, live check)
+scripts/             helper scripts run on your computer (Spotify covers, live check)
 ```
 
 ## Common edits
@@ -34,7 +34,7 @@ scripts/             helper scripts run on your computer (Spotify, live check)
 | Add a project | add an object to `src/data/projects.ts` |
 | Add a skill | `src/data/skills.ts` |
 | Add a hobby / food | `src/data/hobbies.ts` / `src/data/food.ts` |
-| Add a song | `src/data/music.json`, then `npm run spotify` |
+| Add a song | `src/data/music.json` (with its Spotify link), then `npm run spotify` |
 | Update the resume | replace `public/resume.pdf`; edit `src/data/resume.ts` |
 | Change colors | `src/styles/theme.css` |
 | Add a whole new section (blog, etc.) | write a component in `src/sections/`, add one line to `src/sections.ts` |
@@ -54,14 +54,14 @@ Tips: keep each file under about 500 kB (resize big phone photos first), and alw
 
 ## Spotify (album covers and links)
 
-The site is static, so anything in it is public. **Never put the Spotify secret in `src/` or anywhere committed.** Instead, a script on your computer looks the songs up and saves only public data:
+Each song links to Spotify and shows its album cover. No API key or account is needed: the script uses Spotify's public oEmbed endpoint.
 
-1. Create an app at <https://developer.spotify.com/dashboard> and copy its Client ID and Client Secret.
-2. Copy `.env.example` to `.env` and paste the two values in. `.env` is in `.gitignore`, so git never uploads it.
-3. Run `npm run spotify`. It writes `src/data/spotify.generated.json` (links and cover URLs only).
-4. Commit that JSON file and push. The secret never leaves your machine.
+1. In Spotify, open a song, then Share > Copy link (it looks like `https://open.spotify.com/track/...`).
+2. Paste it into that song's `"url"` in `src/data/music.json`.
+3. Run `npm run spotify`. It saves the cover art to `src/data/spotify.generated.json`.
+4. Commit and push both files.
 
-If the secret ever leaks (for example it was committed), regenerate it in the Spotify dashboard right away; deleting the commit does not un-leak it.
+Songs without a `"url"` still link to a Spotify search.
 
 ## Deploying
 

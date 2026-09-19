@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "spotify": "node --env-file=.env scripts/fetch-spotify.mjs",
+    "spotify": "node scripts/fetch-spotify.mjs",
     "verify": "node scripts/verify-live.mjs"
   },
   "dependencies": {

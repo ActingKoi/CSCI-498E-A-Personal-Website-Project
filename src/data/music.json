@@ -1,7 +1,7 @@
 [
-  { "title": "Folded", "artist": "Kehlani" },
-  { "title": "Roxanne", "artist": "Arizona" },
-  { "title": "Blueberry Faygo", "artist": "Lil Mosey" },
-  { "title": "Shelter", "artist": "Porter Robinson" },
-  { "title": "Miniskirt", "artist": "AOA" }
+  { "title": "Folded", "artist": "Kehlani", "url": "" },
+  { "title": "Roxanne", "artist": "Arizona", "url": "" },
+  { "title": "Blueberry Faygo", "artist": "Lil Mosey", "url": "" },
+  { "title": "Shelter", "artist": "Porter Robinson", "url": "" },
+  { "title": "Miniskirt", "artist": "AOA", "url": "" }
 ]

@@ -2,8 +2,8 @@ import list from './music.json'
 import spotify from './spotify.generated.json'
 
 // Your favorite songs live in music.json (edit that file to add or remove
-// songs). `npm run spotify` looks each one up on Spotify and saves the
-// public results (link and cover art) to spotify.generated.json. This file
+// songs; paste each song's Spotify share link into its "url"). `npm run spotify` fetches the
+// cover art for each link into spotify.generated.json. This file
 // merges the two. Songs Spotify hasn't matched fall back to a search link.
 export interface Track {
   title: string
