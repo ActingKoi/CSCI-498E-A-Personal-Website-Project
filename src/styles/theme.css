@@ -1,0 +1,16 @@
+/* THEME: every color, font and size lives here as a CSS variable.
+   To re-skin the whole site, change values in this file only. */
+:root {
+  --bg: #1b1917;          /* warm charcoal page background */
+  --bg-raised: #252220;   /* cards and hover surfaces */
+  --text: #e9e3da;        /* main text */
+  --text-muted: #a0978c;  /* secondary text (AA contrast on --bg) */
+  --border: #38332f;
+  --accent: #f0a04b;      /* the ONE accent color: amber. Used sparingly. */
+
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --sidebar-width: 22rem;
+  --content-max: 42rem;
+}
