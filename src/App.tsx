@@ -1,5 +1,6 @@
 import './styles/theme.css'
 import './styles/global.css'
+import './styles/sections.css'
 import { sections } from './sections'
 import Sidebar from './components/Sidebar'
 import Section from './components/Section'

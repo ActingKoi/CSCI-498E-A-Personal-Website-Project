@@ -1,5 +1,11 @@
 import type { ComponentType } from 'react'
-import Placeholder from './components/Placeholder'
+import About from './sections/About'
+import Projects from './sections/Projects'
+import Skills from './sections/Skills'
+import Hobbies from './sections/Hobbies'
+import Music from './sections/Music'
+import Food from './sections/Food'
+import Resume from './sections/Resume'
 
 // SECTION REGISTRY: the single list that drives both the sidebar nav and the
 // page body. To add a section, add one entry here. Nothing else changes.
@@ -10,11 +16,11 @@ export interface SectionDef {
 }
 
 export const sections: SectionDef[] = [
-  { id: 'about',    title: 'About',    Component: Placeholder },
-  { id: 'projects', title: 'Projects', Component: Placeholder },
-  { id: 'skills',   title: 'Skills',   Component: Placeholder },
-  { id: 'hobbies',  title: 'Hobbies',  Component: Placeholder },
-  { id: 'music',    title: 'Music',    Component: Placeholder },
-  { id: 'food',     title: 'Food',     Component: Placeholder },
-  { id: 'resume',   title: 'Resume',   Component: Placeholder },
+  { id: 'about',    title: 'About',    Component: About },
+  { id: 'projects', title: 'Projects', Component: Projects },
+  { id: 'skills',   title: 'Skills',   Component: Skills },
+  { id: 'hobbies',  title: 'Hobbies',  Component: Hobbies },
+  { id: 'music',    title: 'Music',    Component: Music },
+  { id: 'food',     title: 'Food',     Component: Food },
+  { id: 'resume',   title: 'Resume',   Component: Resume },
 ]

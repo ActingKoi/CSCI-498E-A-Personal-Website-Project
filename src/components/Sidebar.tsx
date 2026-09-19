@@ -1,4 +1,5 @@
 import type { SectionDef } from '../sections'
+import { profile } from '../data/profile'
 
 // Left column: name, short intro, section nav, and outside links.
 // `active` is the section id to highlight (from useActiveSection).
@@ -11,11 +12,9 @@ export default function Sidebar({ sections, active }: Props) {
   return (
     <header className="sidebar">
       <div>
-        <h1>Daniel Hoang</h1>
-        <p className="tagline">Computer science student and food enthusiast</p>
-        <p className="blurb">
-          Senior at Colorado School of Mines. I love trying new food and reading.
-        </p>
+        <h1>{profile.name}</h1>
+        <p className="tagline">{profile.tagline}</p>
+        <p className="blurb">{profile.blurb}</p>
         <nav className="nav" aria-label="Sections">
           <ul>
             {sections.map((s) => (
@@ -29,8 +28,9 @@ export default function Sidebar({ sections, active }: Props) {
         </nav>
       </div>
       <div className="links">
-        <a href="https://github.com/ActingKoi">GitHub</a>
-        {/* TODO: add LinkedIn / email links */}
+        {profile.links.map((l) => (
+          <a key={l.label} href={l.href}>{l.label}</a>
+        ))}
       </div>
     </header>
   )

@@ -1,0 +1,56 @@
+/* SECTION STYLES: shared building blocks used by the section components. */
+.stack { display: grid; gap: 1.25rem; }
+.muted { color: var(--text-muted); }
+.label {
+  margin: 1.5rem 0 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Cards */
+.card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg-raised);
+}
+.card__image { width: 8rem; height: 6rem; object-fit: cover; border-radius: 0.25rem; flex-shrink: 0; }
+.card__title { margin: 0 0 0.5rem; font-size: 1.05rem; }
+.card__title a:hover { color: var(--accent); }
+.card p { margin: 0 0 0.5rem; }
+
+/* Tags (skills, project tech) */
+.tags { list-style: none; margin: 0.5rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tags li {
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+/* Plain lists (music) */
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.list p { margin: 0.15rem 0 0; }
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.button:hover { background: var(--accent); color: var(--bg); }
+
+@media (max-width: 520px) {
+  .card { flex-direction: column; }
+  .card__image { width: 100%; height: 10rem; }
+}
