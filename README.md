@@ -20,7 +20,8 @@ src/
   data/              ALL your content (edit these files to change the site)
   sections/          one component per section; they only render data
   components/        reusable pieces: Card, Section, Sidebar, Avatar
-  styles/theme.css   every color and font (re-skin the site here)
+  styles/theme.css   every color and font (re-skin the site here; fonts are
+                     self-hosted Fraunces + Figtree, imported in src/main.tsx)
   styles/*.css       layout and component styles
 public/              files copied as-is: resume.pdf and images/
 scripts/             helper scripts run on your computer (Spotify covers, live check)

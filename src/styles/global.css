@@ -10,8 +10,17 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  line-height: 1.6;
+  font-size: 1rem;
+  /* Light text on a dark background looks thinner and tighter, so body copy
+     gets a little extra line height and tracking. */
+  line-height: 1.7;
+  letter-spacing: 0.005em;
 }
+
+/* Headings use the display serif. `balance` evens out line lengths so a
+   heading never ends with one lonely word. */
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
+p { text-wrap: pretty; }
 
 a { color: inherit; text-decoration: none; }
 a:hover { color: var(--accent); }
@@ -55,7 +64,7 @@ a:hover { color: var(--accent); }
   }
 }
 
-.sidebar h1 { margin: 0; font-size: 2.5rem; line-height: 1.1; }
+.sidebar h1 { margin: 0; font-size: 2.5rem; font-weight: 650; line-height: 1.05; letter-spacing: -0.02em; }
 
 /* Avatar + name side by side. The bottom margin leaves room for the hint. */
 .identity { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
@@ -78,8 +87,9 @@ a:hover { color: var(--accent); }
   place-items: center;
   border: 2px solid var(--accent);
   border-radius: 50%;
-  font-family: var(--font-mono);
-  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
   color: var(--accent);
 }
 
@@ -94,8 +104,9 @@ a:hover { color: var(--accent); }
   border-radius: 999px;
   background: var(--accent);
   color: var(--bg);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
   white-space: nowrap;
   pointer-events: none;
   animation: bob 1.4s ease-in-out infinite;
@@ -114,15 +125,15 @@ a:hover { color: var(--accent); }
   z-index: 10;
 }
 .skip-link:focus { top: 1rem; }
-.sidebar .tagline { margin: 0.75rem 0 0; font-size: 1.1rem; }
+.sidebar .tagline { margin: 0.75rem 0 0; font-size: 1.15rem; font-weight: 500; line-height: 1.4; }
 .sidebar .blurb { color: var(--text-muted); max-width: 20rem; }
 
 /* Nav: the active link gets the accent color and a longer line. */
 .nav ul { list-style: none; margin: 2rem 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
 .nav a {
-  font-family: var(--font-mono);
   font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
@@ -147,7 +158,7 @@ a:hover { color: var(--accent); }
   .nav a[aria-current='true']::before { transform: scaleX(1); }
 }
 
-.links { display: flex; gap: 1.25rem; font-family: var(--font-mono); font-size: 0.85rem; }
+.links { display: flex; gap: 1.25rem; font-size: 0.9rem; font-weight: 500; }
 
 /* Content column */
 .content { padding: 2rem 0 6rem; max-width: var(--content-max); }
@@ -155,11 +166,11 @@ a:hover { color: var(--accent); }
 .section { padding: 3rem 0; scroll-margin-top: 2rem; }
 .section__title {
   margin: 0 0 1.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text);
 }
 
 @media (prefers-reduced-motion: reduce) {

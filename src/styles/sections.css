@@ -3,9 +3,9 @@
 .muted { color: var(--text-muted); }
 .label {
   margin: 1.5rem 0 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
@@ -43,7 +43,7 @@
     color-mix(in srgb, var(--bg) 15%, transparent) 100%
   );
 }
-.card__title { margin: 0 0 0.5rem; font-size: 1.05rem; }
+.card__title { margin: 0 0 0.5rem; font-size: 1.35rem; font-weight: 600; line-height: 1.2; }
 .card__title a:hover { color: var(--accent); }
 .card p { margin: 0 0 0.5rem; }
 
@@ -53,8 +53,8 @@
   padding: 0.15rem 0.7rem;
   border: 1px solid var(--border);
   border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--accent);
 }
 
@@ -68,8 +68,8 @@
   border: 1px solid var(--accent);
   border-radius: 0.25rem;
   color: var(--accent);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 .button:hover { background: var(--accent); color: var(--bg); }
 

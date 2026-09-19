@@ -10,3 +10,6 @@ dist
 
 # Full-size original photos (kept locally, not uploaded)
 originals/
+
+# Local design-tool notes
+.impeccable/

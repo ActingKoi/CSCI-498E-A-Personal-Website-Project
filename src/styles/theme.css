@@ -8,8 +8,11 @@
   --border: #38332f;
   --accent: #f0a04b;      /* the ONE accent color: amber. Used sparingly. */
 
-  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  /* Two families, both self-hosted (imported in src/main.tsx):
+     Fraunces = warm, soft serif for the name and headings.
+     Figtree  = friendly sans for everything else. */
+  --font-display: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+  --font-body: 'Figtree Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --sidebar-width: 22rem;
   --content-max: 42rem;
