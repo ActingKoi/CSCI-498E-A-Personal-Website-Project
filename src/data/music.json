@@ -1,7 +1,7 @@
 [
-  { "title": "Folded", "artist": "Kehlani", "url": "" },
-  { "title": "Roxanne", "artist": "Arizona", "url": "" },
-  { "title": "Blueberry Faygo", "artist": "Lil Mosey", "url": "" },
-  { "title": "Shelter", "artist": "Porter Robinson", "url": "" },
-  { "title": "Miniskirt", "artist": "AOA", "url": "" }
+  { "title": "Folded", "artist": "Kehlani", "url": "https://open.spotify.com/track/0bxPRWprUVpQK0UFcddkrA?si=7421ed5dba5b4369" },
+  { "title": "Roxanne", "artist": "Arizona Zervas", "url": "https://open.spotify.com/track/696DnlkuDOXcMAnKlTgXXK?si=3b1a8e19bdcd49c2" },
+  { "title": "Blueberry Faygo", "artist": "Lil Mosey", "url": "https://open.spotify.com/track/6wJYhPfqk3KGhHRG76WzOh?si=40d130a8e0254747" },
+  { "title": "Shelter", "artist": "Porter Robinson, Madeon", "url": "https://open.spotify.com/track/5UNJM92MCcDgs4kGgm5fc1?si=a4d56b77b8314abf" },
+  { "title": "Miniskirt", "artist": "AOA", "url": "https://open.spotify.com/track/6Yj8kVuVR3UPxx9r5eFEoV?si=8d93b223060c44a6" }
 ]
