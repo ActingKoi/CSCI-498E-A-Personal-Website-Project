@@ -1,8 +1,8 @@
 // Inline resume summary plus an optional PDF download.
 export const resume = {
-  // Put your PDF at public/resume.pdf, then set this to 'resume.pdf'.
-  // While it is undefined, no download button is shown.
-  pdf: undefined as string | undefined,
+  // The PDF lives at public/resume.pdf. Set this to undefined to hide the
+  // download button (for example if the file is missing).
+  pdf: 'resume.pdf' as string | undefined,
   education: [
     {
       school: 'Colorado School of Mines',

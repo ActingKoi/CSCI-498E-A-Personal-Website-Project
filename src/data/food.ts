@@ -8,5 +8,7 @@ export interface FoodItem {
 }
 
 export const food: FoodItem[] = [
-  { name: 'TODO: a favorite dish', place: 'TODO: where', note: 'TODO: why it is great' },
+  { name: 'Sushi' },
+  { name: 'KBBQ' },
+  { name: 'Seafood boil' },
 ]

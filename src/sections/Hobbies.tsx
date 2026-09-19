@@ -6,7 +6,7 @@ export default function Hobbies() {
     <div className="stack">
       {hobbies.map((h) => (
         <Card key={h.title} title={h.title} image={h.image} imageAlt={h.imageAlt}>
-          <p>{h.description}</p>
+          {h.description && <p>{h.description}</p>}
         </Card>
       ))}
     </div>
