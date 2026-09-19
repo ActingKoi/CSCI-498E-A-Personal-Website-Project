@@ -73,16 +73,20 @@ a:hover { color: var(--accent); }
 @media (min-width: 900px) {
   .nav ul { flex-direction: column; gap: 0.9rem; }
   .nav a { display: flex; align-items: center; gap: 0.75rem; }
-  /* the growing line beside each nav label */
+  /* The line beside each nav label. It is always 4rem wide and is scaled
+     down to half size at rest; scaling with transform is cheap to animate,
+     unlike changing width. transform-origin keeps it growing rightward. */
   .nav a::before {
     content: '';
-    width: 2rem;
+    width: 4rem;
     height: 1px;
     background: currentColor;
-    transition: width 0.2s;
+    transform: scaleX(0.5);
+    transform-origin: left;
+    transition: transform 0.2s;
   }
   .nav a:hover::before,
-  .nav a[aria-current='true']::before { width: 4rem; }
+  .nav a[aria-current='true']::before { transform: scaleX(1); }
 }
 
 .links { display: flex; gap: 1.25rem; font-family: var(--font-mono); font-size: 0.85rem; }
