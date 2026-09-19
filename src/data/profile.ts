@@ -12,9 +12,9 @@ export const profile = {
   // Clicking the avatar cycles through them in this order.
   // Example: { src: 'profile/me1.jpg', alt: 'Daniel smiling at the summit' }
   photos: [
-    { src: 'profile/profile_professional.jpeg', alt: 'Daniel in business suit'},
-    { src: 'profile/profile_mario.png', alt: 'Daniel at Universal Studios Japan' },
-    { src: 'profile/profile_ghibli.jpeg', alt: 'Daniel at Studio Ghibli' }
+    { src: 'profile/profile_professional.jpg', alt: 'Daniel in business suit'},
+    { src: 'profile/profile_mario.jpg', alt: 'Daniel at Universal Studios Japan' },
+    { src: 'profile/profile_ghibli.jpg', alt: 'Daniel at Studio Ghibli' }
   ] as { src: string; alt: string }[],
   // Shown at the bottom of the sidebar. Add or remove entries freely.
   links: [

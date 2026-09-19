@@ -9,6 +9,6 @@ export interface Hobby {
 export const hobbies: Hobby[] = [
   { title: 'Reading', image: 'hobbies/reading.jpg' },
   { title: 'Gym', image: 'hobbies/gym.jpg' },
-  { title: 'Snowboarding', image: 'hobbies/snowboarding.jpeg' },
+  { title: 'Snowboarding', image: 'hobbies/snowboarding.jpg' },
   { title: 'Video games', image: 'hobbies/video_games.jpg' },
 ]
