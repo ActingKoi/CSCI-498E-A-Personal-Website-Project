@@ -27,6 +27,9 @@ export default function Resume() {
           <ul>{x.bullets.map((b) => <li key={b}>{b}</li>)}</ul>
         </div>
       ))}
+
+      <h3 className="label">Leadership & Activities</h3>
+      <p>{resume.activities}</p>
     </>
   )
 }

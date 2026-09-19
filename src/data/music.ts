@@ -7,5 +7,9 @@ export interface Track {
 }
 
 export const music: Track[] = [
-  { title: 'TODO: song or album', artist: 'TODO: artist', note: 'TODO: why you like it' },
+  { title: 'Folded', artist: 'Kehlani' },
+  { title: 'Roxanne', artist: 'Arizona' },
+  { title: 'Blueberry Faygo', artist: 'Lil Mosey' },
+  { title: 'Shelter', artist: 'Porter Robinson' },
+  { title: 'Miniskirt', artist: 'AOA' },
 ]

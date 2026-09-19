@@ -11,9 +11,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'Project Name (TODO)',
-    description: 'TODO: one or two sentences on what it does and what you built.',
-    tech: ['TypeScript', 'React'],
-    repo: 'https://github.com/ActingKoi',
+    title: 'Hungry',
+    description:
+      'An Android restaurant discovery app with Tinder-style swipe cards, an interactive custom map with GPS-mapped restaurant pins, and Firebase-backed accounts and friend lists.',
+    tech: ['Kotlin', 'Jetpack Compose', 'Firebase'],
+    // TODO: add repo: 'https://github.com/ActingKoi/...' when you have the link
+  },
+  {
+    title: 'Personal Finance Tracker',
+    description:
+      'A Python app that pulls transactions from the Plaid API, stores them persistently, and summarizes spending by category, merchant, and time period with pandas and matplotlib.',
+    tech: ['Python', 'Plaid API', 'Pandas', 'Matplotlib'],
+    // TODO: add repo link
   },
 ]
