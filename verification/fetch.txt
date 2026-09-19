@@ -1,10 +1,10 @@
 GET https://actingkoi.github.io/CSCI-498E-A-Personal-Website-Project/
-When: 2026-09-19T22:04:44.180Z
+When: 2026-09-19T23:20:33.557Z
 
 PASS  page returned HTTP 200
 PASS  page <title> is "Daniel Hoang"
 PASS  page references 2 JS/CSS asset(s)
-PASS  /CSCI-498E-A-Personal-Website-Project/assets/index-D2Rk7BAS.js returned HTTP 200
+PASS  /CSCI-498E-A-Personal-Website-Project/assets/index-BcH40zul.js returned HTTP 200
 PASS  /CSCI-498E-A-Personal-Website-Project/assets/index-C_6gV1-W.css returned HTTP 200
 PASS  resume.pdf returned HTTP 200
 
@@ -15,7 +15,7 @@ PASS  resume.pdf returned HTTP 200
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daniel Hoang</title>
-  <script type="module" crossorigin src="/CSCI-498E-A-Personal-Website-Project/assets/index-D2Rk7BAS.js"></script>
+  <script type="module" crossorigin src="/CSCI-498E-A-Personal-Website-Project/assets/index-BcH40zul.js"></script>
   <link rel="stylesheet" crossorigin href="/CSCI-498E-A-Personal-Website-Project/assets/index-C_6gV1-W.css">
 </head>
 <body>
