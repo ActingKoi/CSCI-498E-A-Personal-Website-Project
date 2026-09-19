@@ -12,14 +12,37 @@
 
 /* Cards */
 .card {
-  display: flex;
-  gap: 1.25rem;
-  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 6rem;
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   background: var(--bg-raised);
 }
-.card__image { width: 8rem; height: 6rem; object-fit: cover; border-radius: 0.25rem; flex-shrink: 0; }
+.card__body { position: relative; z-index: 1; padding: 1.25rem; } /* sits above the photo */
+
+/* Photo cards: the image fills the card, and a gradient fades from the page
+   color (left, where the text is) to transparent (right, where the photo
+   shows). Change the percentages to move the fade. */
+.card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card--has-image { min-height: 9rem; }
+.card--has-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--bg) 0%,
+    color-mix(in srgb, var(--bg) 85%, transparent) 40%,
+    color-mix(in srgb, var(--bg) 15%, transparent) 100%
+  );
+}
 .card__title { margin: 0 0 0.5rem; font-size: 1.05rem; }
 .card__title a:hover { color: var(--accent); }
 .card p { margin: 0 0 0.5rem; }
@@ -50,7 +73,17 @@
 }
 .button:hover { background: var(--accent); color: var(--bg); }
 
+/* Music rows */
+.track { display: flex; align-items: center; gap: 1rem; }
+.track__cover { width: 3rem; height: 3rem; border-radius: 0.25rem; object-fit: cover; flex-shrink: 0; }
+
+/* On phones the text spans most of the card, so darken the gradient more. */
 @media (max-width: 520px) {
-  .card { flex-direction: column; }
-  .card__image { width: 100%; height: 10rem; }
+  .card--has-image::after {
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--bg) 90%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 45%, transparent) 100%
+    );
+  }
 }

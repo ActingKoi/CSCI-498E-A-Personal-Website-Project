@@ -8,6 +8,10 @@ export const profile = {
     "Hi everyone! I'm Daniel Hoang, a computer science student at the Colorado School of Mines.",
     'I love trying new food and reading.',
   ],
+  // Profile photos. Put files in public/images/profile/ and list them here.
+  // Clicking the avatar cycles through them in this order.
+  // Example: { src: 'profile/me1.jpg', alt: 'Daniel smiling at the summit' }
+  photos: [] as { src: string; alt: string }[],
   // Shown at the bottom of the sidebar. Add or remove entries freely.
   links: [
     { label: 'GitHub', href: 'https://github.com/ActingKoi' },

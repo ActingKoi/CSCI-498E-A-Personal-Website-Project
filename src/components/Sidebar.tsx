@@ -1,7 +1,8 @@
 import type { SectionDef } from '../sections'
 import { profile } from '../data/profile'
+import Avatar from './Avatar'
 
-// Left column: name, short intro, section nav, and outside links.
+// Left column: photo and name, short intro, section nav, and outside links.
 // `active` is the section id to highlight (from useActiveSection).
 interface Props {
   sections: SectionDef[]
@@ -12,7 +13,10 @@ export default function Sidebar({ sections, active }: Props) {
   return (
     <header className="sidebar">
       <div>
-        <h1>{profile.name}</h1>
+        <div className="identity">
+          <Avatar name={profile.name} photos={profile.photos} />
+          <h1>{profile.name}</h1>
+        </div>
         <p className="tagline">{profile.tagline}</p>
         <p className="blurb">{profile.blurb}</p>
         <nav className="nav" aria-label="Sections">

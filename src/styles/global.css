@@ -56,6 +56,64 @@ a:hover { color: var(--accent); }
 }
 
 .sidebar h1 { margin: 0; font-size: 2.5rem; line-height: 1.1; }
+
+/* Avatar + name side by side. The bottom margin leaves room for the hint. */
+.identity { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
+
+.avatar { position: relative; flex-shrink: 0; width: 5.5rem; height: 5.5rem; }
+.avatar__button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+}
+.avatar__button:disabled { cursor: default; }
+.avatar__button img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.avatar--initials {
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* The floating "click me" pill under the photo. It bobs up and down using the
+   `translate` property so it doesn't fight the transform used for centering. */
+.avatar__hint {
+  position: absolute;
+  bottom: -1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: bob 1.4s ease-in-out infinite;
+}
+@keyframes bob {
+  50% { translate: 0 -0.35rem; }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  z-index: 10;
+}
+.skip-link:focus { top: 1rem; }
 .sidebar .tagline { margin: 0.75rem 0 0; font-size: 1.1rem; }
 .sidebar .blurb { color: var(--text-muted); max-width: 20rem; }
 
@@ -107,4 +165,5 @@ a:hover { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
+  .avatar__hint { animation: none; }
 }

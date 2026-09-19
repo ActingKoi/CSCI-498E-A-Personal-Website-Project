@@ -5,7 +5,7 @@ export interface Project {
   tech: string[]     // shown as small tags
   link?: string      // live demo, if any
   repo?: string      // source code, if any
-  image?: string     // file in public/images/, e.g. 'my-project.png'
+  image?: string     // path in public/images/, e.g. 'projects/hungry.png'
   imageAlt?: string  // required if image is set (describe what it shows)
 }
 

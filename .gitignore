@@ -2,3 +2,8 @@
 Thumbs.db
 node_modules
 dist
+
+# Secrets: never commit these. See .env.example
+.env
+.env.*
+!.env.example

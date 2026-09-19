@@ -14,8 +14,10 @@ export default function App() {
 
   return (
     <div className="layout">
+      {/* Lets keyboard users jump past the sidebar nav (accessibility). */}
+      <a className="skip-link" href="#main">Skip to content</a>
       <Sidebar sections={sections} active={active} />
-      <main className="content">
+      <main id="main" className="content">
         {sections.map(({ id, title, Component }) => (
           <Section key={id} id={id} title={title}>
             <Component />

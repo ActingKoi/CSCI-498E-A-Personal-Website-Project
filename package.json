@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "spotify": "node --env-file=.env scripts/fetch-spotify.mjs",
+    "verify": "node scripts/verify-live.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
