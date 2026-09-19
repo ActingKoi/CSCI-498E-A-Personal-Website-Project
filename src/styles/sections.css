@@ -21,26 +21,41 @@
 }
 .card__body { position: relative; z-index: 1; padding: 1.25rem; } /* sits above the photo */
 
-/* Photo cards: the image fills the card, and a gradient fades from the page
-   color (left, where the text is) to transparent (right, where the photo
-   shows). Change the percentages to move the fade. */
+/* Photo tiles (Hobbies, Food): the photo fills the tile and a gradient rises
+   from the bottom so the title stays readable over any picture. Tiles sit in a
+   2-column grid; every 3rd tile (1st, 4th, ...) spans both columns so the
+   layout has rhythm instead of a stack of identical banners. */
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.tiles .card:nth-child(3n + 1) { grid-column: span 2; aspect-ratio: 21 / 9; }
+
 .card__image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Slow zoom on hover; ease-out so it settles softly. */
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.card--has-image { min-height: 9rem; }
+.card--has-image:hover .card__image { transform: scale(1.05); }
+
+.card--has-image {
+  display: flex;
+  align-items: flex-end;   /* title sits at the bottom of the tile */
+  aspect-ratio: 4 / 3;
+  min-height: 9rem;
+}
+.card--has-image .card__body { width: 100%; }
+.card--has-image .card__title { font-size: 1.6rem; margin-bottom: 0; }
 .card--has-image::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    var(--bg) 0%,
-    color-mix(in srgb, var(--bg) 85%, transparent) 40%,
-    color-mix(in srgb, var(--bg) 15%, transparent) 100%
+    to top,
+    color-mix(in srgb, var(--bg) 92%, transparent) 0%,
+    color-mix(in srgb, var(--bg) 55%, transparent) 35%,
+    transparent 75%
   );
 }
 .card__title { margin: 0 0 0.5rem; font-size: 1.35rem; font-weight: 600; line-height: 1.2; }
@@ -55,7 +70,7 @@
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--text-muted);
 }
 
 /* Plain lists (music) */
@@ -77,13 +92,8 @@
 .track { display: flex; align-items: center; gap: 1rem; }
 .track__cover { width: 3rem; height: 3rem; border-radius: 0.25rem; object-fit: cover; flex-shrink: 0; }
 
-/* On phones the text spans most of the card, so darken the gradient more. */
+/* On phones the tiles stack in a single column. */
 @media (max-width: 520px) {
-  .card--has-image::after {
-    background: linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--bg) 90%, transparent) 0%,
-      color-mix(in srgb, var(--bg) 45%, transparent) 100%
-    );
-  }
+  .tiles { grid-template-columns: 1fr; }
+  .tiles .card:nth-child(3n + 1) { grid-column: auto; aspect-ratio: 4 / 3; }
 }

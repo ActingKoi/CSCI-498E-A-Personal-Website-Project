@@ -6,6 +6,7 @@ export interface FoodItem {
   note?: string
   image?: string
   imageAlt?: string
+  imagePosition?: string   // e.g. 'center top' to keep faces in frame
 }
 
 export const food: FoodItem[] = [
