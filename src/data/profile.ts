@@ -11,7 +11,11 @@ export const profile = {
   // Profile photos. Put files in public/images/profile/ and list them here.
   // Clicking the avatar cycles through them in this order.
   // Example: { src: 'profile/me1.jpg', alt: 'Daniel smiling at the summit' }
-  photos: [] as { src: string; alt: string }[],
+  photos: [
+    { src: 'profile/profile_professional.jpeg', alt: 'Daniel in business suit'},
+    { src: 'profile/profile_mario.png', alt: 'Daniel at Universal Studios Japan' },
+    { src: 'profile/profile_ghibli.jpeg', alt: 'Daniel at Studio Ghibli' }
+  ] as { src: string; alt: string }[],
   // Shown at the bottom of the sidebar. Add or remove entries freely.
   links: [
     { label: 'GitHub', href: 'https://github.com/ActingKoi' },

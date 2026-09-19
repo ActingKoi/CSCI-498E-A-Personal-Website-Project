@@ -9,7 +9,7 @@ export interface FoodItem {
 }
 
 export const food: FoodItem[] = [
-  { name: 'Sushi' },
-  { name: 'KBBQ' },
-  { name: 'Seafood boil' },
+  { name: 'Sushi', image: 'food/sushi.jpg' },
+  { name: 'KBBQ', image: 'food/KBBQ.jpeg' },
+  { name: 'Seafood boil', image: 'food/seafood_boil.jpeg' },
 ]
