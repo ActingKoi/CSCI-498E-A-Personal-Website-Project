@@ -39,9 +39,10 @@ export default function Avatar({ name, photos }: Props) {
         className="avatar__button"
         onClick={next}
         disabled={!canCycle}
-        aria-label={`${name}: photo ${index + 1} of ${photos.length}. Activate to see the next photo.`}
+        aria-label={`${photo.alt}. Photo ${index + 1} of ${photos.length}. Activate to see the next photo.`}
       >
-        <img src={imageUrl(photo.src)} alt={photo.alt} />
+        {/* The button's label already describes the photo, so the image is decorative. */}
+        <img src={imageUrl(photo.src)} alt="" />
       </button>
       {canCycle && !hasClicked && <span className="avatar__hint" aria-hidden="true">click me</span>}
     </div>

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import type { SectionDef } from '../sections'
 import { profile } from '../data/profile'
 import Avatar from './Avatar'
@@ -10,6 +11,18 @@ interface Props {
 }
 
 export default function Sidebar({ sections, active }: Props) {
+  const listRef = useRef<HTMLUListElement>(null)
+
+  // On phones the nav is a sideways-scrolling bar. Keep the active link
+  // centered in it. We scroll the list itself (not scrollIntoView) so the
+  // page never jumps.
+  useEffect(() => {
+    const list = listRef.current
+    const link = list?.querySelector<HTMLElement>('[aria-current="true"]')
+    if (!list || !link) return
+    list.scrollTo({ left: link.offsetLeft - list.clientWidth / 2 + link.clientWidth / 2, behavior: 'smooth' })
+  }, [active])
+
   return (
     <header className="sidebar">
       <div>
@@ -20,7 +33,7 @@ export default function Sidebar({ sections, active }: Props) {
         <p className="tagline">{profile.tagline}</p>
         <p className="blurb">{profile.blurb}</p>
         <nav className="nav" aria-label="Sections">
-          <ul>
+          <ul ref={listRef}>
             {sections.map((s) => (
               <li key={s.id}>
                 <a href={`#${s.id}`} aria-current={active === s.id ? 'true' : undefined}>

@@ -37,7 +37,10 @@
   /* Slow zoom on hover; ease-out so it settles softly. */
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.card--has-image:hover .card__image { transform: scale(1.05); }
+/* Hover zoom only where a real hover exists (not on touch screens). */
+@media (hover: hover) {
+  .card--has-image:hover .card__image { transform: scale(1.05); }
+}
 
 .card--has-image {
   display: flex;
@@ -70,7 +73,7 @@
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--accent-2);
 }
 
 /* Plain lists (music) */
