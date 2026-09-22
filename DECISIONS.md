@@ -14,7 +14,7 @@ Delete these instructions when you are done, or leave them. It does not matter.
 What you wanted at the start, and what is actually live now.
 Name one thing you dropped or added along the way, and why.
 
-Initially I wanted a professional website that showcases my projects and skills for employers. While I did create that at the end, I made it more personable by adding my favorite hobbies and food for example to show what I'm like outside of school. I also added 
+Initially I wanted a professional website that showcases my projects and skills for employers. While I did create that at the end, I made it more personable by adding my favorite hobbies and food for example to show what I'm like outside of school. I also added my favorite songs and thought that was a nice touch to my empty site at the time.
 
 ---
 
