@@ -56,7 +56,6 @@ export default function Avatar({ name, photos }: Props) {
 
   return (
     <div className="avatar">
-      <div className="avatar-glow" aria-hidden="true" />
       <button
         ref={cardRef}
         type="button"
