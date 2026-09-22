@@ -1,11 +1,11 @@
 GET https://actingkoi.github.io/CSCI-498E-A-Personal-Website-Project/
-When: 2026-09-22T03:11:22.651Z
+When: 2026-09-22T03:16:50.475Z
 
 PASS  page returned HTTP 200
 PASS  page <title> is "Daniel Hoang"
 PASS  page references 2 JS/CSS asset(s)
-PASS  /CSCI-498E-A-Personal-Website-Project/assets/index-qi4iyFhZ.js returned HTTP 200
-PASS  /CSCI-498E-A-Personal-Website-Project/assets/index-CDycC_jG.css returned HTTP 200
+PASS  /CSCI-498E-A-Personal-Website-Project/assets/index-BhzBWiAE.js returned HTTP 200
+PASS  /CSCI-498E-A-Personal-Website-Project/assets/index-h2kE6aQ7.css returned HTTP 200
 PASS  resume.pdf returned HTTP 200
 
 --- response body ---
@@ -15,8 +15,8 @@ PASS  resume.pdf returned HTTP 200
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Daniel Hoang</title>
-  <script type="module" crossorigin src="/CSCI-498E-A-Personal-Website-Project/assets/index-qi4iyFhZ.js"></script>
-  <link rel="stylesheet" crossorigin href="/CSCI-498E-A-Personal-Website-Project/assets/index-CDycC_jG.css">
+  <script type="module" crossorigin src="/CSCI-498E-A-Personal-Website-Project/assets/index-BhzBWiAE.js"></script>
+  <link rel="stylesheet" crossorigin href="/CSCI-498E-A-Personal-Website-Project/assets/index-h2kE6aQ7.css">
 </head>
 <body>
   <!-- React mounts the whole site into this div (see src/main.tsx). -->

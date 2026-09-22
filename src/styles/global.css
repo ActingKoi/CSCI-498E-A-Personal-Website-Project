@@ -76,18 +76,14 @@ html { scrollbar-color: var(--border) var(--bg); }
        (small window or big zoom), the sidebar scrolls instead of clipping. */
     padding: clamp(2rem, 10vh, 6rem) 0;
     overflow-y: auto;
-    /* Still scrollable if content doesn't fit (see comment above), just
-       without a visible scrollbar track. */
-    scrollbar-width: none;
   }
-  .sidebar::-webkit-scrollbar { display: none; }
   .layout { padding-bottom: 0; }
 }
 
 .sidebar h1 { margin: 0; font-size: clamp(2rem, 8vw, 2.5rem); font-weight: 650; line-height: 1.05; letter-spacing: -0.02em; }
 
-/* Avatar + name side by side. The bottom margin leaves room for the hint. */
-.identity { display: flex; align-items: flex-end; gap: 1.5rem; margin-bottom: 2.25rem; }
+/* Avatar above the name, stacked. */
+.identity { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2.25rem; }
 
 /* A tilting square card, not a circle: it leans toward the mouse (handleMove
    in Avatar.tsx sets --rx/--ry). Touch and reduced-motion users still get the
