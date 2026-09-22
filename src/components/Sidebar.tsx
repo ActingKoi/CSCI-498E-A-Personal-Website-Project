@@ -29,7 +29,10 @@ export default function Sidebar({ sections, active }: Props) {
       <div>
         <div className="identity">
           <Avatar name={profile.name} photos={profile.photos} />
-          <h1>{profile.name}</h1>
+          {/* First and last name always stack, regardless of width. */}
+          <h1>{profile.name.split(' ').map((part, i) => (i === 0 ? part : <>
+            <br />{part}
+          </>))}</h1>
         </div>
         <SocialLinks links={profile.links} />
         <nav className="nav" aria-label="Sections">
