@@ -12,5 +12,5 @@ export interface FoodItem {
 export const food: FoodItem[] = [
   { name: 'Sushi', image: 'food/sushi.jpg' },
   { name: 'KBBQ', image: 'food/KBBQ.jpg' },
-  { name: 'Seafood boil', image: 'food/seafood_boil.jpg' },
+  { name: 'Seafood', image: 'food/seafood_boil.jpg' },
 ]

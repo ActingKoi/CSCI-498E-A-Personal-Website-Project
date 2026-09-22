@@ -11,7 +11,8 @@ import Resume from './sections/Resume'
 // page body. To add a section, add one entry here. Nothing else changes.
 export interface SectionDef {
   id: string                 // used for the #anchor and scroll tracking
-  title: string              // shown in the nav and as the section heading
+  title: string              // the section heading
+  navLabel?: string          // shorter label for the sidebar nav; defaults to title
   Component: ComponentType   // what to render as the section's body
 }
 
@@ -20,7 +21,7 @@ export const sections: SectionDef[] = [
   { id: 'projects', title: 'Projects', Component: Projects },
   { id: 'skills',   title: 'Skills',   Component: Skills },
   { id: 'hobbies',  title: 'Hobbies',  Component: Hobbies },
-  { id: 'music',    title: 'Music',    Component: Music },
-  { id: 'food',     title: 'Food',     Component: Food },
+  { id: 'music',    title: 'Top 5 Songs', navLabel: 'Songs', Component: Music },
+  { id: 'food',     title: 'Favorite Food', navLabel: 'Food', Component: Food },
   { id: 'resume',   title: 'Resume',   Component: Resume },
 ]

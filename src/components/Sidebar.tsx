@@ -37,7 +37,7 @@ export default function Sidebar({ sections, active }: Props) {
             {sections.map((s) => (
               <li key={s.id}>
                 <a href={`#${s.id}`} aria-current={active === s.id ? 'true' : undefined}>
-                  {s.title}
+                  {s.navLabel ?? s.title}
                 </a>
               </li>
             ))}
