@@ -6,7 +6,7 @@ export const profile = {
   name: 'Daniel Hoang',
   // Each string becomes one paragraph in the About section.
   about: [
-    "Hey, I'm Daniel! I'm a computer science student at Colorado School of Mines interested in software development and AI. Below are what I've worked on and my favorite hobbies,music, and food!"
+    "Hey, I'm Daniel! I'm a computer science student at Colorado School of Mines interested in software development and AI. Below are what I've worked on and my favorite hobbies, music, and food!"
   ],
 
   // Profile photos. Put files in public/images/profile/ and list them here.

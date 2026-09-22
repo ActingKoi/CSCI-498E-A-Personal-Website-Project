@@ -45,7 +45,7 @@ a:hover { color: var(--accent); }
 .content { overflow-wrap: break-word; }
 
 /* Browser surfaces themed from the palette. */
-::selection { background: var(--accent-2); color: var(--bg); }
+::selection { background: var(--accent); color: var(--bg); }
 html { scrollbar-color: var(--border) var(--bg); }
 
 @media (min-width: 900px) {

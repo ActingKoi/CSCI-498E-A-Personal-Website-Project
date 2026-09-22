@@ -6,11 +6,9 @@
   --text: #e9e3da;        /* main text */
   --text-muted: #a0978c;  /* secondary text (AA contrast on --bg) */
   --border: #38332f;
-  /* Two accents with separate jobs:
-     --accent   amber: where you are (active nav) and things you can click.
-     --accent-2 coral: playful flavor (tags, the wavy underline on titles). */
+  /* The one accent color (amber): marks where you are (active nav) and
+     things you can click. */
   --accent: #f0a04b;
-  --accent-2: #ef7b8d;
 
   /* Two families, both self-hosted (imported in src/main.tsx):
      Fraunces = warm, soft serif for the name and headings.
