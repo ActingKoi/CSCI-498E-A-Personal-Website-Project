@@ -83,7 +83,7 @@ html { scrollbar-color: var(--border) var(--bg); }
 .sidebar h1 { margin: 0; font-size: clamp(2rem, 8vw, 2.5rem); font-weight: 650; line-height: 1.05; letter-spacing: -0.02em; }
 
 /* Avatar + name side by side. The bottom margin leaves room for the hint. */
-.identity { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
+.identity { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2.25rem; }
 
 .avatar { position: relative; flex-shrink: 0; width: 5.5rem; height: 5.5rem; }
 .avatar__button {
@@ -143,8 +143,6 @@ html { scrollbar-color: var(--border) var(--bg); }
   z-index: 10;
 }
 .skip-link:focus { top: 1rem; }
-.sidebar .tagline { margin: 0.75rem 0 0; font-size: 1.15rem; font-weight: 500; line-height: 1.4; }
-.sidebar .blurb { color: var(--text-muted); max-width: 20rem; }
 
 /* Nav on phones: a fixed bar along the bottom (thumb-friendly) that scrolls
    sideways because 7 items don't fit. Each link is at least 44px tall. */
@@ -201,9 +199,71 @@ html { scrollbar-color: var(--border) var(--bg); }
   .nav a[aria-current='true']::before { transform: scaleX(1); }
 }
 
-.links { display: flex; gap: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 500; }
-/* Bigger tap area on touch screens without changing how it looks. */
-@media (pointer: coarse) { .links a { padding: 0.7rem 0.25rem; } }
+
+/* Round icon buttons under the name. Hover or keyboard focus fills the circle
+   with the accent color, lifts it with a springy bounce, and pops up a tooltip. */
+.social { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.75rem; }
+.social__link {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg-raised);
+  color: var(--text);
+  transition:
+    transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+.social__link svg { width: 1.3rem; height: 1.3rem; }
+.social__tip {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translate(-50%, -0.4rem);
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.3rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.2s;
+}
+/* The little arrow pointing up at the button. */
+.social__tip::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  transform: translateX(-50%) rotate(45deg);
+}
+.social__link:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+  transform: translateY(-3px);
+}
+.social__link:focus-visible .social__tip { opacity: 1; transform: translate(-50%, 0); }
+@media (hover: hover) {
+  .social__link:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+    transform: translateY(-3px);
+  }
+  .social__link:hover .social__tip { opacity: 1; transform: translate(-50%, 0); }
+}
 
 /* Content column */
 .content { padding: 2rem 0 6rem; max-width: var(--content-max); }

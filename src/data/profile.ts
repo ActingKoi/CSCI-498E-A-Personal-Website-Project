@@ -1,13 +1,12 @@
+import type { SocialLink } from '../components/SocialLinks'
+import { publicUrl } from '../assets'
+
 // Who you are. Used by the sidebar and the About section.
 export const profile = {
   name: 'Daniel Hoang',
-  tagline: 'Computer science student and food enthusiast',
-  blurb: 'Senior at Colorado School of Mines. I love trying new food and reading.',
   // Each string becomes one paragraph in the About section.
   about: [
-    "Hey, I'm Daniel! I'm a computer science senior at Colorado School of Mines (graduating May 2027) who spends the day wrangling data and the evening hunting for the next great meal.",
-    'This summer I built data pipelines at Xcel Energy that help predict icing on wind turbines. On my own time I made Hungry, an app that lets you swipe your way to dinner.',
-    "Away from the keyboard you'll find me snowboarding, at the gym, lost in a book or a video game, or stuck deciding between sushi, KBBQ, and a seafood boil (no wrong answers). Say hi if you have a restaurant rec.",
+    "Hey, I'm Daniel! I'm a computer science student at Colorado School of Mines interested in software development and AI. Below are what I've worked on and my favorite hobbies,music, and food!"
   ],
 
   // Profile photos. Put files in public/images/profile/ and list them here.
@@ -18,10 +17,12 @@ export const profile = {
     { src: 'profile/profile_mario.jpg', alt: 'Daniel at Universal Studios Japan' },
     { src: 'profile/profile_ghibli.jpg', alt: 'Daniel at Studio Ghibli' }
   ] as { src: string; alt: string }[],
-  // Shown at the bottom of the sidebar. Add or remove entries freely.
+  // Round icon buttons under your name. Add, remove or reorder freely.
+  // icon must be one of: 'github' | 'linkedin' | 'resume' | 'email'
   links: [
-    { label: 'GitHub', href: 'https://github.com/ActingKoi' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dhoang-mines' },
-    { label: 'Email', href: 'mailto:danny.hoang.denver@gmail.com' },
-  ],
+    { label: 'GitHub', href: 'https://github.com/ActingKoi', icon: 'github' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dhoang-mines', icon: 'linkedin' },
+    { label: 'Resume', href: publicUrl('resume.pdf'), icon: 'resume' },
+    // { label: 'Email', href: 'mailto:danny.hoang.denver@gmail.com', icon: 'email' },
+  ] as SocialLink[],
 }

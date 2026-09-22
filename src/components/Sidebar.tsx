@@ -2,8 +2,9 @@ import { useEffect, useRef } from 'react'
 import type { SectionDef } from '../sections'
 import { profile } from '../data/profile'
 import Avatar from './Avatar'
+import SocialLinks from './SocialLinks'
 
-// Left column: photo and name, short intro, section nav, and outside links.
+// Left column: photo and name, link buttons, and the section nav.
 // `active` is the section id to highlight (from useActiveSection).
 interface Props {
   sections: SectionDef[]
@@ -30,8 +31,7 @@ export default function Sidebar({ sections, active }: Props) {
           <Avatar name={profile.name} photos={profile.photos} />
           <h1>{profile.name}</h1>
         </div>
-        <p className="tagline">{profile.tagline}</p>
-        <p className="blurb">{profile.blurb}</p>
+        <SocialLinks links={profile.links} />
         <nav className="nav" aria-label="Sections">
           <ul ref={listRef}>
             {sections.map((s) => (
@@ -43,11 +43,6 @@ export default function Sidebar({ sections, active }: Props) {
             ))}
           </ul>
         </nav>
-      </div>
-      <div className="links">
-        {profile.links.map((l) => (
-          <a key={l.label} href={l.href}>{l.label}</a>
-        ))}
       </div>
     </header>
   )
